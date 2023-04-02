@@ -1,6 +1,19 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+<!-- https://stackoverflow.com/questions/8988855/include-another-html-file-in-a-html-file -->
+<html> 
+  <head> 
+    <script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("base.html"); 
+    });
+    </script> 
+  </head> 
+  <body> 
+     <div id="includedContent"></div>
+  </body> 
+</html>
+
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -81,4 +94,3 @@
         Copyright © Student Game Developers 2020
     </p>
 </div>
-{% endblock %}
