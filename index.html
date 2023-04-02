@@ -13,18 +13,18 @@
   <head> 
     <script src="jquery.js"></script> 
     <script> 
-    $(function(){
-      $("#includedContent").load("base.html"); 
-    });
+    $(function () {
+        var includes = $('[data-include]')
+        $.each(includes, function () {
+            var file = $(this).data('include') + '.html'
+            $(this).load(file)
+        })
+    })
     </script> 
   </head> 
-
-  <body> 
-     <div id="includedContent"></div>
-  </body> 
 </html>
 
-
+<div data-include="base"></div>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
