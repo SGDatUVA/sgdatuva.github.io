@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner h-1">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="{% static 'img/carousel/Carousel1.jpg' %}" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{% static 'img/carousel/Carousel2.jpg' %}" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{% static 'img/carousel/Carousel3.jpg' %}" alt="Third slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="container text-center mt-4">
+    <h1>SGD Events</h1>
+    <hr>
+    <p class="w-50 mx-auto">
+        Welcome to the homepage of Student Game Developers! We are a student-run organization focused
+        on creating original games and expanding knowledge about game design as an art and industry.
+    </p>
+    <hr>
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title m-auto"><i class="fas fa-graduation-cap"></i> Learn More About Us</h5>
+            </div>
+            <div class="card-body d-flex flex-column">
+                <p class="card-text">
+                    Student Game Developers is a for students by students club at the University of Virginia.
+                    We love building video games and working in teams. Click below to learn more about us and
+                    how to connect with us!
+                </p>
+                <a href="{% url 'about.html' %}" class="btn btn-light mt-auto">Learn More</a>
+            </div>
+        </div>
+        <!-- <div class="card">
+            <div class="card-header">
+                <h5 class="card-title m-auto"><i class="fas fa-gamepad"></i> Check Out Our Games!</h5>
+            </div>
+            <div class="card-body d-flex flex-column">
+                <p class="card-text">
+                    Students work on semester long projects and then share them with the rest of their peers
+                    during our mid-semester and end-of-semester expos. From RPGs, to shooters, platformers,
+                    puzzles, and more! Check them out on the link below!
+                </p>
+                <a href="{% url 'projects_by_year' 2021 %}" class="btn btn-light mt-auto">Learn More</a>
+            </div>
+        </div> -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title m-auto"><i class="fas fa-user-cog"></i> Connect with Our Officers</h5>
+            </div>
+            <div class="card-body d-flex flex-column">
+                <p class="card-text">
+                    Shoot them an email at uvasgd@gmail.com or stop by an event and say hello! Our officers
+                    enjoy sharing experiences and connections with new members. They have all been a part of
+                    large projects and have also directed. Click below for more information!
+                </p>
+                <a href="{% url 'officers.html' %}" class="btn btn-light mt-auto">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p>
+        Copyright © Student Game Developers 2020
+    </p>
+</div>
+{% endblock %}
