@@ -5,27 +5,35 @@ import GameCard from '@/components/game-card'
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.hero}>
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/sgd-logo.svg"
-            alt="SGD Logo"
-            width={360}
-            height={200}
-            priority
-          />
-        </div>
+      <div className={styles.landing}>
+        <Image 
+          className={styles.hero}
+          alt = "Landing Page Hero"
+          src="/landing-hero.jpg"
+          quality={100}
+          fill
+          style={{objectFit: "cover"}}
+        /> 
 
-        <div className={styles.welcome}>
-          <p>
-            Welcome to the homepage of Student Game Developers! We are a student-run organization focused
-            on creating original games and expanding knowledge about game design as an art and industry. 
-            Check out our Spring 2023 semester games below!
-          </p>
-        </div>
-
+        <Image
+          className={styles.logo}
+          alt="SGD Logo"
+          src="/sgd-logo.svg"
+          width={360}
+          height={200}
+          priority
+        /> 
       </div>
+{/*       
+
+      <div className={styles.welcome}>
+        <p>
+          Welcome to the homepage of Student Game Developers! We are a student-run organization focused
+          on creating original games and expanding knowledge about game design as an art and industry. 
+          Check out our Spring 2023 semester games below!
+        </p>
+      </div>
+
 
 `     <GameCard name="Flammable Forest" thumbnail="/dungeon-crab-2.png"/>
       <div className={styles.grid}>
@@ -78,7 +86,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
   )
 }

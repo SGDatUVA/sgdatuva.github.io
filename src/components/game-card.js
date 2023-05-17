@@ -6,13 +6,13 @@ export default function GameCard({name, thumbnail}) {
 
   return (
     <div className={styles.container}>
-        <Image 
-            className={styles.thumbnail}
-            alt = {altText}
-            src={thumbnail}
-            quality={100}
-            fill
-          />  
+      <Image 
+          className={styles.thumbnail}
+          alt = {altText}
+          src={thumbnail}
+          quality={100}
+          fill
+        />  
 
       <a
       href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
