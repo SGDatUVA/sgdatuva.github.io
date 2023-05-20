@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import Navbar from '@/components/navbar'
 import GameCard from '@/components/game-card'
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <Navbar />
       <div className={styles.landing}>
         <Image 
           className={styles.hero}
