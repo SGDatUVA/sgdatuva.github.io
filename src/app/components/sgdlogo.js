@@ -10,7 +10,7 @@ export default function  SGDLogo(props) {
         strokeLinejoin: "round",
         strokeMiterlimit: 2,
       }}
-      viewBox="0 0 300 300"
+      viewBox="0 0 300 200"
       {...props}
     >
       <path
