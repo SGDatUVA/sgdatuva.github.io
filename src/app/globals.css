@@ -10,6 +10,6 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: var(--background-start-rgb);
+  color: var(--secondary-hex);
+  background: var(--background-hex);
 }
