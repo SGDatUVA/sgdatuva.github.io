@@ -9,9 +9,8 @@ export default function Home() {
       {/* Landing */}
       <div className='h-screen w-full flex flex-col'>
         <Navbar/>
-
         <div className='relative grow flex'>
-          <BgImage source="/landing-hero.jpg" opacity={100}/>
+          <BgImage source="/landing-hero.jpg" className="opacity-100"/>
           <SGDLogo className="w-80 h-80 fill-highlight lg:absolute lg:left-10 lg:bottom-10 "/>
         </div>
       </div>

@@ -1,13 +1,13 @@
 import Image from "next/image"
 
-export default function BgImage({source, opacity}) {
-  console.log(opacity);
-  const opacityUtil = (opacity === undefined) ? "opacity-20" : `opacity-[${opacity/100}]`;
+export default function BgImage({source, className}) {
+  const defaultOpacity = (className !== undefined && className.includes("opacity-")) ? "" : "opacity-20 "
+
   return (
     <Image 
       src={source}
       alt="Landing Hero"
-      className={"object-cover -z-10 " + opacityUtil}
+      className={"object-cover -z-10 " + defaultOpacity + className}
       quality={100}
       fill
       priority
