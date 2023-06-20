@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Navbar from '@/app/components/navbar'
 import SGDLogo from '@/app/components/sgdlogo'
 import BgImage from '@/app/components/bg-image'
+import GameCard from './components/game-card'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           <SGDLogo className="w-80 h-80 fill-highlight lg:absolute lg:left-10 lg:bottom-10 "/>
         </div>
       </div>
+
       {/* Welcome Section */}
       <div className='h-[50vh] w-full relative flex flex-col items-center border-t-2 border-primary'>
         <BgImage source="/welcome-background.jpg"/>
@@ -28,6 +30,18 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Last Semester Games Section */}
+      <div className='h-[50vh] w-full relative border-t-2 border-primary'>
+        <BgImage source="/stock-computer.jpg" className="object-center"/>
+        <div className='h-full w-full flex items-center '>
+          <h2 className='ml-8 text-4xl text-primary font-bold text-center basis-1/4'>Spring 2023<br/>Games</h2>
+          <div className='flex space-x-8'>
+              <GameCard name="Flammable Forest"/>
+              <GameCard name="Across the Sea of Dust and Rot"/>
+              <GameCard name="Dungeon Crab 2: Electric Boogaloo"/>
+          </div>
+        </div>
+      </div>
     </main>
   )
 }
