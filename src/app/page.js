@@ -42,6 +42,15 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* FAQ */}
+      <div className='h-[50vh] w-full flex relative border-t-2 border-primary'>
+        <BgImage source="/game-jam.png" className="object-center opacity-60"/>
+        <div className='h-[100px] w-full bg-background self-end	border-t-2 border-primary flex items-center justify-center'>
+          <p>Copyright © Student Game Developers 2023</p>
+        </div>
+      </div>
+
     </main>
   )
 }
