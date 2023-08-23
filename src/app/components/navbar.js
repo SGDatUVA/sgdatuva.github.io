@@ -7,11 +7,11 @@ export default function Navbar() {
         <SGDLogoText className="fill-primary"/>
       </Link>
       <div className="flex items-center justify-evenly basis-5/12 font-bold text-2xl">
-        <Link href="/" >About</Link>
-        <Link href="/">Games</Link>
-        <Link href="/">Calendar</Link>
-        <Link href="/">Wiki</Link>
-        <Link href="/" className="w-10">
+        <Link className="hover:text-highlight" href="/" >About</Link>
+        <Link className="hover:text-highlight" href="/">Games</Link>
+        <Link className="hover:text-highlight" href="/">Calendar</Link>
+        <Link className="hover:text-highlight" href="/">Wiki</Link>
+        <Link className="hover:text-highlight w-10" href="/">
           <DiscordLogo className="fill-primary"/>
         </Link>
       </div>
