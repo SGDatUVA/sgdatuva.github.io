@@ -36,9 +36,9 @@ export default function Home() {
         <div className='h-full w-full flex items-center '>
           <h2 className='ml-8 text-4xl text-primary font-bold text-center basis-1/4'>Spring 2023<br/>Games</h2>
           <div className='flex space-x-8'>
-              <GameCard name="Flammable Forest"/>
-              <GameCard name="Across the Sea of Dust and Rot"/>
-              <GameCard name="Dungeon Crab 2: Electric Boogaloo"/>
+              <GameCard name="Flammable Forest" href="https://uvasgd.itch.io/flammable-forest" background="/flammableforest-thumbnail.png"/>
+              <GameCard name="Across the Sea of Dust and Rot" href="https://buzjr.itch.io/across-the-sea-of-dust-and-rot" background="/dustandrot-thumbnail.png"/>
+              <GameCard name="Dungeon Crab 2: Electric Boogaloo" href="https://jimmyc5.itch.io/dungeon-crab-2" background="/dungeoncrab-thumbnail.png"/>
           </div>
         </div>
       </div>
