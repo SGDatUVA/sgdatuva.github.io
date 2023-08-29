@@ -10,7 +10,7 @@ export default function Navbar() {
         <Link className="hover:text-highlight" href="/" >About</Link>
         <Link className="hover:text-highlight" href="https://uvasgd.itch.io/">Games</Link>
         <Link className="hover:text-highlight" href="/">Calendar</Link>
-        <Link className="hover:text-highlight" href="/">Wiki</Link>
+        <Link className="hover:text-highlight" href="https://uvasgd.github.io/sgd-docs/README.html">Wiki</Link>
         <Link className="hover:text-highlight w-10" href="/">
           <DiscordLogo className="fill-primary"/>
         </Link>
