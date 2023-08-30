@@ -3,6 +3,7 @@ import Navbar from '@/app/components/navbar'
 import SGDLogo from '@/app/components/sgdlogo'
 import BgImage from '@/app/components/bg-image'
 import GameCard from './components/game-card'
+import FAQCard from './components/faq-card'
 
 export default function Home() {
   return (
@@ -44,8 +45,18 @@ export default function Home() {
       </div>
 
       {/* FAQ */}
-      <div className='h-[50vh] w-full flex relative border-t-2 border-primary'>
+      <div className='h-[50vh] w-full flex flex-col relative border-t-2 border-primary'>
         <BgImage source="/game-jam.png" className="object-center opacity-60"/>
+        <div className='h-full w-full flex items-center justify-center space-x-8'>
+          <FAQCard question='Where and when does SGD meet?' answer='Our next event will be our September pitch night where the semester projects will be introduced. More details soon. '></FAQCard>
+          <FAQCard question='Does SGD do anything besides make games?' answer='SGD is primarily a game development club, but we also have social events and host sessions with industry professionals. '></FAQCard>
+          <FAQCard question='What kind of software does SGD use?' answer='SGD projects mainly use the Unity game engine and github for source control, but all forms of game making are welcome!'></FAQCard>
+          <FAQCard question='Who can I contact for more info?' answer='For any further questions feel free to reach out to uvasgd@gmail.com or contact any officers in the discord server. '></FAQCard>
+        </div>
+
+
+
+        {/* Copyright */}
         <div className='h-[100px] w-full bg-background self-end	border-t-2 border-primary flex items-center justify-center'>
           <p>Copyright © Student Game Developers 2023</p>
         </div>
