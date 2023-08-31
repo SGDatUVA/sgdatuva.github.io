@@ -18,9 +18,10 @@ export default function Home() {
       </div>
 
       {/* Welcome Section */}
-      <div className='h-[50vh] w-full relative flex flex-col items-center border-t-2 border-primary'>
+      <div className='h-[70vh] w-full relative flex flex-col items-center border-t-2 border-highlight md:border-primary md:h-[50vh]'>
         <BgImage source="/welcome-background.jpg"/>
-        <div className='h-full w-[1060px] flex flex-col justify-center space-y-8 text-center font-medium text-xl break-normal'>
+        <div className='h-full w-[70%] flex flex-col justify-center space-y-8 text-center font-medium text-base break-normal
+        md:text-xl'>
           <p>Welcome to the homepage of Student Game Developers! We are a student-run organization focused on creating original games and 
             expanding knowledge about game design as an art and industry.
           </p>
