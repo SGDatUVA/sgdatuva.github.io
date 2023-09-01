@@ -18,10 +18,10 @@ export default function Home() {
       </div>
 
       {/* Welcome Section */}
-      <div className='h-[70vh] w-full relative flex flex-col items-center border-t-2 border-highlight md:border-primary md:h-[50vh]'>
+      <div className='w-full relative flex flex-col items-center border-t-2 border-highlight md:border-primary md:h-[50vh]'>
         <BgImage source="/welcome-background.jpg"/>
-        <div className='h-full w-[70%] flex flex-col justify-center space-y-8 text-center font-medium text-base break-normal
-        md:text-xl'>
+        <div className='h-full w-[70%] flex flex-col justify-center space-y-8 text-center font-medium text-base break-normal my-4 
+        md:my-0 md:text-lg lg:text-xl'>
           <p>Welcome to the homepage of Student Game Developers! We are a student-run organization focused on creating original games and 
             expanding knowledge about game design as an art and industry.
           </p>
@@ -33,11 +33,11 @@ export default function Home() {
       </div>
 
       {/* Last Semester Games Section */}
-      <div className='h-[50vh] w-full relative border-t-2 border-primary'>
+      <div className='w-full relative border-t-2 border-primary md:h-[50vh]'>
         <BgImage source="/stock-computer.jpg" className="object-center"/>
-        <div className='h-full w-full flex items-center '>
-          <h2 className='ml-8 text-4xl text-primary font-bold text-center basis-1/4'>Spring 2023<br/>Games</h2>
-          <div className='flex space-x-8'>
+        <div className='h-full w-full flex flex-col items-center my-4 md:flex-row xl:pl-16 md:my-0'>
+          <h2 className='text-3xl text-primary font-bold text-center mb-2 md:m-0 md:basis-1/4 lg:text-4xl'>Spring 2023<br/>Games</h2>
+          <div className='flex flex-col space-y-4 md:space-x-4 md:space-y-0 md:flex-row lg:space-x-8'>
               <GameCard name="Flammable Forest" href="https://uvasgd.itch.io/flammable-forest" background="/flammableforest-thumbnail.png"/>
               <GameCard name="Across the Sea of Dust and Rot" href="https://buzjr.itch.io/across-the-sea-of-dust-and-rot" background="/dustandrot-thumbnail.png"/>
               <GameCard name="Dungeon Crab 2: Electric Boogaloo" href="https://jimmyc5.itch.io/dungeon-crab-2" background="/dungeoncrab-thumbnail.png"/>
