@@ -11,9 +11,9 @@ export default function Home() {
       {/* Landing */}
       <div className='h-screen w-full flex flex-col'>
         <Navbar/>
-        <div className='relative grow flex'>
-          <BgImage source="/landing-hero.jpg" className="opacity-100"/>
-          <SGDLogo className="w-80 h-80 fill-highlight lg:absolute lg:left-10 lg:bottom-10 "/>
+        <div className='relative h-full flex flex-col items-center'>
+          <BgImage source="/landing-hero.jpg" className="object-center opacity-80"/>
+          <SGDLogo className="w-[70vw] fill-highlight md:w-80 md:h-80 md:absolute md:left-10 md:bottom-10 "/>
         </div>
       </div>
 
