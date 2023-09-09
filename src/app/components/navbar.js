@@ -119,42 +119,7 @@ function CloseSVG(props) {
 
 
 
-// <nav className="bg-blue-500 p-4">
-//     <div className="container mx-auto flex justify-between items-center">
-//         <a href="#" className="text-white text-2xl font-bold">Logo</a>
-//         <ul className="hidden md:flex space-x-4">
-//             <li><a href="#" className="text-white hover:text-gray-300">Home</a></li>
-//             <li><a href="#" className="text-white hover:text-gray-300">About</a></li>
-//             <li><a href="#" className="text-white hover:text-gray-300">Services</a></li>
-//             <li><a href="#" className="text-white hover:text-gray-300">Contact</a></li>
-//         </ul>
-//         <!-- Add a responsive menu button for smaller screens -->
-//         <div className="md:hidden">
-//             <button className="text-white">
-//                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-//                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-//                 </svg>
-//             </button>
-//         </div>
-//     </div>
-// </nav>
 
-
-
-//     <nav className="h-20 w-full flex items-center justify-between text-primary bg-background border-b-2	border-current">
-
-{/* <nav className="h-20 container mx-auto flex items-center justify-between 
-text-primary bg-background border-b-2	border-current">
-  <Link href="/">
-    <SGDLogoText className="fill-primary"/>
-  </Link>
-  <div className="flex items-center justify-evenly basis-5/12 font-bold text-2xl">
-    <Link className="hover:text-highlight" href="/" >About</Link>
-    <Link className="hover:text-highlight" href="https://uvasgd.itch.io/">Games</Link>
-    <Link className="hover:text-highlight" href="/">Calendar</Link>
-    <Link className="hover:text-highlight" href="https://uvasgd.github.io/sgd-docs/README.html">Wiki</Link>
-    <Link className="hover:text-highlight w-10" href="/">
-      <DiscordLogo className="fill-primary"/>
     </Link>
   </div>
 </nav> */}
