@@ -1,20 +1,46 @@
+'use client'
+
 import Link from "next/link"
+import { useState  } from "react";
 
 export default function Navbar() {
+  const [navOpen, setNavOpen] = useState(false);
+  const itchLink = "https://uvasgd.itch.io/";
+  const wikiLink = "https://uvasgd.github.io/sgd-docs/README.html";
+
+
   return (
-    <nav className="h-20 w-full flex items-center justify-between text-primary bg-background border-b-2	border-current">
-      <Link href="/" className="w-16 ml-2">
-        <SGDLogoText className="fill-primary"/>
+    <nav className="relative w-full h-20 flex items-center justify-between px-4 text-primary bg-background border-b-2	border-current">
+      <Link href="/">
+        <SGDLogoText className="fill-primary w-10"/>
       </Link>
-      <div className="flex items-center justify-evenly basis-5/12 font-bold text-2xl">
-        <Link className="hover:text-highlight" href="/" >About</Link>
-        <Link className="hover:text-highlight" href="https://uvasgd.itch.io/">Games</Link>
-        <Link className="hover:text-highlight" href="/">Calendar</Link>
-        <Link className="hover:text-highlight" href="https://uvasgd.github.io/sgd-docs/README.html">Wiki</Link>
-        <Link className="hover:text-highlight w-10" href="/">
-          <DiscordLogo className="fill-primary"/>
-        </Link>
+      {/* Mobile Display */}
+      
+      <Hamburger className="md:hidden" onClick={() => setNavOpen((prev) => !prev)}/>
+      <div className={ `${(navOpen) ? "" : "hidden "} block absolute w-full h-screen top-0 left-0 bg-background z-10`}>
+        <ul className="flex flex-col items-center font-bold text-4xl space-y-8 pt-8">
+          <CloseSVG onClick={() => setNavOpen((prev) => !prev)} />
+          <Link className="hover:text-highlight" href="/" >About</Link>
+          <Link className="hover:text-highlight" href={itchLink}>Games</Link>
+          <Link className="hover:text-highlight" href="/">Calendar</Link>
+          <Link className="hover:text-highlight" href={wikiLink}>Wiki</Link>
+          <Link className="hover:text-highlight w-10" href="/">
+            <DiscordLogo className="fill-primary"/>
+          </Link>
+        </ul>
       </div>
+
+      {/* Desktop Display */}
+      <ul className="hidden md:flex items-center font-bold text-2xl space-x-4">
+      <Link className="hover:text-highlight" href="/" >About</Link>
+          <Link className="hover:text-highlight" href={itchLink}>Games</Link>
+          <Link className="hover:text-highlight" href="/">Calendar</Link>
+          <Link className="hover:text-highlight" href={wikiLink}>Wiki</Link>
+          <Link className="hover:text-highlight w-10" href="/">
+            <DiscordLogo className="fill-primary"/>
+          </Link>
+      </ul>
+
     </nav>
   )
 }
@@ -61,3 +87,74 @@ function DiscordLogo(props) {
     </svg>
   )
 }
+
+// From: https://codesandbox.io/s/tailwind-react-hamburger-menu-tjhfyx?file=/src/components/Header/Header.js:393-782
+function Hamburger(props) {
+  return(
+    <div className={"space-y-2 " + props.className} onClick={props.onClick} >
+      <span className="block h-0.5 w-8 bg-primary rounded-lg"></span>
+      <span className="block h-0.5 w-8 bg-primary rounded-lg"></span>
+      <span className="block h-0.5 w-8 bg-primary rounded-lg"></span>
+    </div>
+  )
+}
+
+// From: https://codesandbox.io/s/tailwind-react-hamburger-menu-tjhfyx?file=/src/components/Header/Header.js:393-782
+function CloseSVG(props) {
+  return (
+    <svg onClick={props.onClick}
+      className="h-8 w-8 text-bg-primary"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+  </svg>
+  )
+}
+
+
+
+// <nav className="bg-blue-500 p-4">
+//     <div className="container mx-auto flex justify-between items-center">
+//         <a href="#" className="text-white text-2xl font-bold">Logo</a>
+//         <ul className="hidden md:flex space-x-4">
+//             <li><a href="#" className="text-white hover:text-gray-300">Home</a></li>
+//             <li><a href="#" className="text-white hover:text-gray-300">About</a></li>
+//             <li><a href="#" className="text-white hover:text-gray-300">Services</a></li>
+//             <li><a href="#" className="text-white hover:text-gray-300">Contact</a></li>
+//         </ul>
+//         <!-- Add a responsive menu button for smaller screens -->
+//         <div className="md:hidden">
+//             <button className="text-white">
+//                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+//                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+//                 </svg>
+//             </button>
+//         </div>
+//     </div>
+// </nav>
+
+
+
+//     <nav className="h-20 w-full flex items-center justify-between text-primary bg-background border-b-2	border-current">
+
+{/* <nav className="h-20 container mx-auto flex items-center justify-between 
+text-primary bg-background border-b-2	border-current">
+  <Link href="/">
+    <SGDLogoText className="fill-primary"/>
+  </Link>
+  <div className="flex items-center justify-evenly basis-5/12 font-bold text-2xl">
+    <Link className="hover:text-highlight" href="/" >About</Link>
+    <Link className="hover:text-highlight" href="https://uvasgd.itch.io/">Games</Link>
+    <Link className="hover:text-highlight" href="/">Calendar</Link>
+    <Link className="hover:text-highlight" href="https://uvasgd.github.io/sgd-docs/README.html">Wiki</Link>
+    <Link className="hover:text-highlight w-10" href="/">
+      <DiscordLogo className="fill-primary"/>
+    </Link>
+  </div>
+</nav> */}
