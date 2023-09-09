@@ -32,13 +32,13 @@ export default function Navbar() {
 
       {/* Desktop Display */}
       <ul className="hidden md:flex items-center font-bold text-2xl space-x-4">
-      <Link className="hover:text-highlight" href="/" >About</Link>
-          <Link className="hover:text-highlight" href={itchLink}>Games</Link>
-          <Link className="hover:text-highlight" href="/">Calendar</Link>
-          <Link className="hover:text-highlight" href={wikiLink}>Wiki</Link>
-          <Link className="hover:text-highlight w-10" href="/">
-            <DiscordLogo className="fill-primary"/>
-          </Link>
+        <Link className="hover:text-highlight" href="/" >About</Link>
+        <Link className="hover:text-highlight" href={itchLink}>Games</Link>
+        <Link className="hover:text-highlight" href="/">Calendar</Link>
+        <Link className="hover:text-highlight" href={wikiLink}>Wiki</Link>
+        <Link className="hover:text-highlight w-10" href="/">
+          <DiscordLogo className="fill-primary"/>
+        </Link>
       </ul>
 
     </nav>
@@ -116,10 +116,3 @@ function CloseSVG(props) {
   </svg>
   )
 }
-
-
-
-
-    </Link>
-  </div>
-</nav> */}
