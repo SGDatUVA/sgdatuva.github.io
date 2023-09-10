@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Navbar from '@/app/components/navbar'
 import SGDLogo from '@/app/components/sgdlogo'
 import BgImage from '@/app/components/bg-image'
 import GameCard from './components/game-card'
@@ -8,9 +6,10 @@ import FAQCard from './components/faq-card'
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center">
-      {/* Landing */}
-      <div className='h-screen w-full flex flex-col'>
-        <Navbar/>
+
+      {/* Landing*/}
+      {/* 80 px is because Navbar componenet in app/layout.js is h-20 or 80px */}
+      <div className='h-[calc(100vh-80px)] w-full flex flex-col'> 
         <div className='relative h-full flex flex-col items-center'>
           <BgImage source="/landing-hero.jpg" className="object-center opacity-80"/>
           <SGDLogo className="w-[70vw] fill-highlight md:w-80 md:h-80 md:absolute md:left-10 md:bottom-10 "/>
