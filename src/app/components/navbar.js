@@ -10,7 +10,7 @@ export default function Navbar() {
   const calendarPath = "/"
   const wikiLink = "https://uvasgd.github.io/sgd-docs/README.html";
 
-
+  // If height (h-20) gets updated, make sure to update the hero in app/page.js so that the height fills up the homepage correctly 
   return (
     <nav className="relative w-full h-20 flex items-center justify-between px-4 text-primary bg-background border-b-2	border-current">
       <Link href="/">
@@ -22,10 +22,10 @@ export default function Navbar() {
       <div className={ `${(navOpen) ? "" : "hidden "} block absolute w-full h-screen top-0 left-0 bg-background z-10`}>
         <ul className="flex flex-col items-center font-bold text-4xl space-y-8 pt-8">
           <CloseSVG onClick={() => setNavOpen((prev) => !prev)} />
-          <Link className="hover:text-highlight" href={aboutPath}>About</Link>
-          <Link className="hover:text-highlight" href={itchLink}>Games</Link>
-          <Link className="hover:text-highlight" href={calendarPath}>Calendar</Link>
-          <Link className="hover:text-highlight" href={wikiLink}>Wiki</Link>
+          <Link className="hover:text-highlight" href={aboutPath} onClick={() => setNavOpen((prev) => !prev)}>About</Link>
+          <Link className="hover:text-highlight" href={itchLink} onClick={() => setNavOpen((prev) => !prev)}>Games</Link>
+          <Link className="hover:text-highlight" href={calendarPath} onClick={() => setNavOpen((prev) => !prev)}>Calendar</Link>
+          <Link className="hover:text-highlight" href={wikiLink} onClick={() => setNavOpen((prev) => !prev)}>Wiki</Link>
           <Link className="hover:text-highlight w-10" href="/">
             <DiscordLogo className="fill-primary"/>
           </Link>
