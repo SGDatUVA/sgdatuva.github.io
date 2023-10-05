@@ -7,7 +7,8 @@ export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
   const aboutPath = "/about"
   const itchLink = "https://uvasgd.itch.io/";
-  const calendarPath = "/"
+  // const calendarLink = 
+  const calendarPath = "/calendar"
   const wikiLink = "https://uvasgd.github.io/sgd-docs/README.html";
 
   // If height (h-20) gets updated, make sure to update the hero in app/page.js so that the height fills up the homepage correctly 
