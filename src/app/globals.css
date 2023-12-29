@@ -36,32 +36,32 @@ nav{
   padding: 16px;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1;*/
 }
 .nav__menu-bar{
   display: flex;
   flex-direction: column;
-  row-gap: 6px;
+  row-gap: 9px;
   cursor: pointer;
 }
 .nav__menu-bar div{
   width: 40px;
-  height: 4px;
-  background-color: black;
+  height: 6px;
+  background-color: #B8A1BE;
   border-radius: 2px;
 }
 .nav__menu-list{
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 60px;
+  top: 68px;
   width: 288px;
   row-gap: 24px;
   right: -288px;
   padding: 24px 16px;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
-  background-color: #f1f1f1;
+  background-color: var(--background-alt-hex);
 }
 .nav__menu-list.active{
   right: 0;

@@ -17,13 +17,13 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className={`nav`}>
+      <nav className={`nav bg-background relative`}>
         <Link href={"/"}>
           <Image
-            className="rounded-lg"
+            className="rounded-lg absolute top-4 left-3"
             src="/pixel-logo.png"
-            width={55}
-            height={55}
+            width={57}
+            height={57}
             alt="SGD Logo"
           />
         </Link>
