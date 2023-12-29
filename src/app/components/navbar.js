@@ -19,13 +19,22 @@ const Navbar = () => {
     <header>
       <nav className={`nav bg-background relative`}>
         <Link href={"/"}>
-          <Image
-            className="rounded-lg absolute top-4 left-3"
-            src="/pixel-logo.png"
-            width={57}
-            height={57}
-            alt="SGD Logo"
-          />
+          <div className="absolute top-4 left-3 flex space-x-1.5">
+            <Image
+              className="rounded-lg"
+              src="/pixel-logo.png"
+              width={57}
+              height={57}
+              alt="Pixel Logo"
+            />
+            <Image 
+              src="/sgd-text.svg"
+              width={45}
+              height={45}
+              alt="Logo Text"
+            />
+          </div>
+
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}
