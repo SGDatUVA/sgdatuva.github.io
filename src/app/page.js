@@ -1,5 +1,6 @@
-import Navbar from '@/app/components/navbar'
-import Image from 'next/image'
+import Navbar from './components/navbar';
+import SectionHeader from './components/section-header';
+import Image from 'next/image';
 
 
 export default function Home() {
@@ -28,9 +29,10 @@ export default function Home() {
           <div> 
             Check out how to get involved and some of our most recent game down below! 
           </div>
-          </div>
+        </div>
 
-    </div>
+      </div>
+      <SectionHeader text="Fall 2023 Games"/>
     </main>
   );
 }
