@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 
 const SectionHeader = ({ text }) => {
@@ -11,10 +10,10 @@ const SectionHeader = ({ text }) => {
         height={30}
         alt="Controller Logo"
       />
-      <h3 className="font-bold
+      <h2 className="font-bold
        text-center text-2xl text-primary">
         {text}
-      </h3>
+      </h2>
     </div>
   );
 };

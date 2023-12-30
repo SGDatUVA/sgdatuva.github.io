@@ -1,7 +1,33 @@
+import Gamecard from './components/gamecard';
 import Navbar from './components/navbar';
 import SectionHeader from './components/section-header';
 import Image from 'next/image';
 
+const games = [{ 
+    name: "Fae:Star",
+    thumbnail: "faestar.png",
+    engine: "Unity",
+    dimension: "2D",
+    description: "Turn-based RPG where you battle as four unique characters",
+    url: "https://ianharvey.itch.io/fae-star" 
+  },
+  { 
+    name: "Quicksilver",
+    thumbnail: "quicksilver.png",
+    engine: "Unity",
+    dimension: "3D",
+    description: "Physics-based platformer featuring a diverse move set to escape from the firewall",
+    url: "https://buzjr.itch.io/quicksilver"
+  },
+  { 
+    name: "Lantern's Lament",
+    thumbnail: "lanterns-lament.png",
+    engine: "Godot",
+    dimension: "2D",
+    description: "Puzzle game where you must conserve your lantern’s oil while exploring a dark maze",
+    url: "https://kedrickfudala.itch.io/lanterns-lament"
+  }
+]
 
 export default function Home() {
   return (
@@ -33,6 +59,11 @@ export default function Home() {
 
       </div>
       <SectionHeader text="Fall 2023 Games"/>
+      <div className='flex flex-col items-center space-y-5'>
+        <Gamecard gameInfo={games[0]}/>
+        <Gamecard gameInfo={games[1]} flipped={true}/>
+        <Gamecard gameInfo={games[2]}/>
+      </div>
     </main>
   );
 }
