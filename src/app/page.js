@@ -62,6 +62,8 @@ export default function Home() {
 
       </div>
 
+
+      {/* Fall Games */}
       <SectionHeader text="Fall 2023 Games"/>
       <div className='flex flex-col items-center space-y-5'>
         <Gamecard gameInfo={games[0]}/>
@@ -69,7 +71,8 @@ export default function Home() {
         <Gamecard gameInfo={games[2]}/>
       </div>
       
-      <div className='bg-background-alt rounded-t-2xl'>
+      {/* FAQ */}
+      <div className='bg-background-alt rounded-t-2xl pb-10'>
         <SectionHeader text="FAQ" className="pt-5"/>
         <div className='flex flex-col items-center space-y-4 text-xs'>
           <p className='w-3/4 text-primary text-center font-bold'>
@@ -88,7 +91,11 @@ export default function Home() {
         
       
       </div>
-
+      
+      {/* Copyright */}
+      <div className='h-8 flex items-center justify-center'>
+        <p className='text-primary text-sm'>Copyright © Student Game Developers 2023</p>
+      </div>
     </main>
   );
 }
