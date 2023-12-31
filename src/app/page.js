@@ -1,7 +1,9 @@
+import FAQ from './components/faq';
 import Gamecard from './components/gamecard';
 import Navbar from './components/navbar';
 import SectionHeader from './components/section-header';
 import Image from 'next/image';
+import Link from 'next/link'
 
 const games = [{ 
     name: "Fae:Star",
@@ -26,13 +28,14 @@ const games = [{
     dimension: "2D",
     description: "Puzzle game where you must conserve your lantern’s oil while exploring a dark maze",
     url: "https://kedrickfudala.itch.io/lanterns-lament"
-  }
-]
+  }]
 
 export default function Home() {
   return (
     <main>
       <Navbar/>
+
+      {/* Hero */}
       <div className="h-48 relative flex justify-center">
         <div className="absolute inset-0 -z-10 h-full blur-sm brightness-50	">
             <Image
@@ -58,12 +61,34 @@ export default function Home() {
         </div>
 
       </div>
+
       <SectionHeader text="Fall 2023 Games"/>
       <div className='flex flex-col items-center space-y-5'>
         <Gamecard gameInfo={games[0]}/>
         <Gamecard gameInfo={games[1]} flipped={true}/>
         <Gamecard gameInfo={games[2]}/>
       </div>
+      
+      <div className='bg-background-alt rounded-t-2xl'>
+        <SectionHeader text="FAQ" className="pt-5"/>
+        <div className='flex flex-col items-center space-y-4 text-xs'>
+          <p className='w-3/4 text-primary text-center font-bold'>
+            For an overview on how the club is structured, how teams are formed and games get developed check out the about page! 
+          </p>
+          <p className='w-3/4 pb-4 text-primary text-center font-bold'>
+            Also be sure to join discord <Link href="" className='underline underline-offset-2'>here</Link>. 
+          </p>
+          <FAQ question={"When are club-wide meetings?"} answer={"Every Thursday in Thornton E303 5:30pm - 7:00pm."}/>
+          <FAQ question={"When are team meetings?"} answer={"Every director holds weekly meeting for game-specific development time. Ask in your team channel in the discord to find out what time that is."}/>
+          <FAQ question={"How can I contact an officer?"} answer={"Join the discord and ping or private message anyone with the officer role! If email works better feel free to shoot a message to uvasgd@gmail.com."}/>
+          <FAQ question={"Is it just game development?"} answer={"The club is primarily focused on collaborative game development, but we also hold social nights (with board games and video games), industry guest speaker talks and development workshops. There’s no commitment so come out to whatever interests you!"}/>
+          <FAQ question={"Game Jams?"} answer={"We hold at least one game jam a semester where all skill levels in programming, music, art, game design start and finish a game in one weekend."}/>
+          <p className='w-3/4 pt-4 text-primary text-center font-bold'>We’re open and interested to collaborating with students, CIOs, orgnizations, companies, other game dev clubs so please reach out to  uvasgd@gmail.com with any questions, comments, or inquiries. Thanks!</p>
+        </div>
+        
+      
+      </div>
+
     </main>
   );
 }

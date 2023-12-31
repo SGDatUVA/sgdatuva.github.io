@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-const SectionHeader = ({ text }) => {
+const SectionHeader = ({ text, className="" }) => {
   return (
-    <div className="my-5 flex justify-center align-center space-x-1">
+    <div className={"my-5 flex justify-center align-center space-x-1 " + className}>
       <Image 
         className="pt-1"
         src="/sgd-controller.svg"
