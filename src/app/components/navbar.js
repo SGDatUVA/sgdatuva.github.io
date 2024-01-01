@@ -9,7 +9,9 @@ import NavItem from "./navitem";
 const MENU_LIST = [
   { text: "Home", href: "/" },
   { text: "About Us", href: "/about" },
-  { text: "Contact", href: "/contact" },
+  { text: "Games", href: "https://uvasgd.itch.io/" },
+  /* Remember to update discord link in FAQ */
+  { text: "Discord", href: "https://discord.gg/B5JYp7cwuC"}
 ];
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);

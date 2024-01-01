@@ -93,6 +93,8 @@ nav{
     width: fit-content;
     column-gap: 24px;
     align-items: center;
+    padding: 0px 0px;
+    background-color: unset;
   }
   .nav__link::before{
     content: '';
