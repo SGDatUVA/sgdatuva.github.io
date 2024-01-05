@@ -7,11 +7,11 @@ import React, { useState } from "react";
 import NavItem from "./navitem";
 
 const MENU_LIST = [
-  { text: "Home", href: "/" },
-  { text: "About Us", href: "/about" },
-  { text: "Games", href: "https://uvasgd.itch.io/" },
+  { text: "Home", href: "/", icon: "/nav/house-fill.svg" },
+  { text: "About Us", href: "/about", icon: "/nav/people-fill.svg"  },
+  { text: "Games", href: "https://uvasgd.itch.io/", icon: "/nav/joystick.svg"  },
   /* Remember to update discord link in FAQ */
-  { text: "Discord", href: "https://discord.gg/B5JYp7cwuC"}
+  { text: "Discord", href: "https://discord.gg/B5JYp7cwuC", icon: "/nav/discord.svg" }
 ];
 const Navbar = (currentPage) => {
   const [navActive, setNavActive] = useState(null);
