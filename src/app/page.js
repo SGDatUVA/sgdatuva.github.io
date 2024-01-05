@@ -1,7 +1,7 @@
-import FAQ from './components/faq';
-import Gamecard from './components/gamecard';
-import Navbar from './components/navbar';
-import SectionHeader from './components/section-header';
+import FAQ from '@/app/components/faq';
+import Gamecard from '@/app/components/gamecard';
+import Navbar from '@/app/components/navbar';
+import SectionHeader from '@/app/components/section-header';
 import Image from 'next/image';
 import Link from 'next/link'
 
@@ -33,10 +33,10 @@ const games = [{
 export default function Home() {
   return (
     <main>
-      <Navbar/>
+      <Navbar currentPage="Home"/>
 
       {/* Hero */}
-      <div className="h-48 relative flex justify-center">
+      <div className="h-64 relative flex justify-center">
         <div className="absolute inset-0 -z-10 h-full blur-sm brightness-50	">
             <Image
               src="/landing-hero.jpg"
@@ -47,7 +47,7 @@ export default function Home() {
               priority
             />
         </div>
-        <div className='w-11/12 flex flex-col justify-center space-y-2
+        <div className='w-11/12 flex flex-col justify-center space-y-4
         text-xs font-semibold text-center'> 
           <div> 
             Welcome to the homepage of Student Game Developers! We are a student-run organization focused on creating original games and expanding knowledge about game design as an art and industry.

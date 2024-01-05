@@ -13,7 +13,7 @@ const MENU_LIST = [
   /* Remember to update discord link in FAQ */
   { text: "Discord", href: "https://discord.gg/B5JYp7cwuC"}
 ];
-const Navbar = () => {
+const Navbar = (currentPage) => {
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
 
