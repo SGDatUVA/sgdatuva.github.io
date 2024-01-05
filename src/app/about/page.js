@@ -52,6 +52,11 @@ export default function Page() {
         External relations: Zach Hay <br/>
         Webmaster: Griffin Chozick <br/>
       </p>
+
+      {/* Copyright */}
+      <div className='mt-8 h-8 flex items-center justify-center '>
+        <p className='text-primary text-sm'>Copyright © Student Game Developers 2023</p>
+      </div>
     </main>
   );
 }
