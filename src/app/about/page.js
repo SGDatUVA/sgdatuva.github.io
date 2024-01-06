@@ -15,15 +15,15 @@ export default function Page() {
         <div className="absolute inset-0 -z-10 h-full blur-sm brightness-50	">
             <Image
               src="/welcome-background.jpg"
-              layout="fill"
-              objectFit="cover"
+              fill
+              cover              
               quality={100}
               alt="Landing Hero"
               priority
             />
         </div>
         <div className='w-11/12 flex flex-col justify-center space-y-2
-        text-xs lg:text-sm font-semibold text-center'> 
+        text-xs lg:text-base font-semibold text-center'> 
           <div> 
             SGD games are developed in teams led by directors. All projects are developed over the course of a semester. At the beginning of every semester, we have a &quot;pitch night&quot; where directors will showcase their ideas to the club.           
           </div>
@@ -39,11 +39,11 @@ export default function Page() {
 
       {/* Current Sem Projects */}
       <SectionHeader text="Spring 2024 Projects"/>
-      <h2>TBD at January pitch night</h2>
+      <p className='xl:text-base'>TBD at January pitch night</p>
 
       {/* Current Sem Projects */}
       <SectionHeader text="Officers"/>
-      <p>
+      <p className='xl:text-base'>
         President: Spencer Portuese <br/>
         Vice President: Joey Giordano <br/>
         Head of Directors: Nate Pawlas <br/>

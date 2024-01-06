@@ -40,15 +40,15 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 h-full blur-sm brightness-50	">
             <Image
               src="/landing-hero.jpg"
-              layout="fill"
-              objectFit="cover"
+              fill
+              cover
               quality={100}
               alt="Landing Hero"
               priority
             />
         </div>
         <div className='w-11/12 flex flex-col justify-center space-y-4
-        text-xs lg:text-sm font-semibold text-center'> 
+        text-xs lg:text-base font-semibold text-center'> 
           <div> 
             Welcome to the homepage of Student Game Developers! We are a student-run organization focused on creating original games and expanding knowledge about game design as an art and industry.
           </div>
@@ -75,7 +75,7 @@ export default function Home() {
       {/* FAQ */}
       <div className='bg-background-alt rounded-t-2xl pb-10'>
         <SectionHeader text="FAQ" className="pt-5"/>
-        <div className='flex flex-col items-center space-y-4 text-xs'>
+        <div className='flex flex-col items-center space-y-4 text-xs xl:text-base'>
           <p className='w-3/4 text-primary text-center font-bold'>
             For an overview on how the club is structured, how teams are formed and games get developed check out our <Link href="/about"  className='underline underline-offset-2'>About Us</Link> page! 
           </p>
