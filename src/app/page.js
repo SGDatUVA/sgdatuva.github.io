@@ -48,7 +48,7 @@ export default function Home() {
             />
         </div>
         <div className='w-11/12 flex flex-col justify-center space-y-4
-        text-xs font-semibold text-center'> 
+        text-xs lg:text-sm font-semibold text-center'> 
           <div> 
             Welcome to the homepage of Student Game Developers! We are a student-run organization focused on creating original games and expanding knowledge about game design as an art and industry.
           </div>
@@ -65,9 +65,10 @@ export default function Home() {
 
       {/* Fall Games */}
       <SectionHeader text="Fall 2023 Games"/>
-      <div className='flex flex-col items-center space-y-5'>
+      <div className='flex flex-col items-center justify-center space-y-5 lg:flex-row lg:space-y-0 lg:space-x-8'>
         <Gamecard gameInfo={games[0]}/>
-        <Gamecard gameInfo={games[1]} flipped={true}/>
+        <Gamecard className="hidden lg:flex" gameInfo={games[1]}/>
+        <Gamecard className="lg:hidden" gameInfo={games[1]} flipped={true}/>
         <Gamecard gameInfo={games[2]}/>
       </div>
       

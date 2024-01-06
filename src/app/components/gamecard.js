@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Gamecard = ({ gameInfo, flipped=false }) => {
+const Gamecard = ({ className, gameInfo, flipped=false }) => {
   return (
-    <Link href={gameInfo.url} className={"w-4/5 h-40 flex align-center bg-background-alt rounded-lg drop-shadow-lg" + (flipped ? " flex-row-reverse" : "")}>
+    <Link href={gameInfo.url} className={className + " w-4/5 md:w-1/2 lg:w-[30%] h-40 flex align-center bg-background-alt rounded-lg drop-shadow-lg" + (flipped ? " flex-row-reverse" : "")}>
       <div className="min-h-full aspect-square relative">
         <Image 
           className={flipped ? "rounded-r-lg" : "rounded-l-lg"}

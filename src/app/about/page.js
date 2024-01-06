@@ -23,9 +23,9 @@ export default function Page() {
             />
         </div>
         <div className='w-11/12 flex flex-col justify-center space-y-2
-        text-xs font-semibold text-center'> 
+        text-xs lg:text-sm font-semibold text-center'> 
           <div> 
-            SGD games are developed in teams led by directors. All projects are developed over the course of a semester. At the beginning of every semester, we have a "&quot; pitch night"&quot; where directors will showcase their ideas to the club.           
+            SGD games are developed in teams led by directors. All projects are developed over the course of a semester. At the beginning of every semester, we have a &quot;pitch night&quot; where directors will showcase their ideas to the club.           
           </div>
           <div> 
             Afterwards, all members will rank the projects and be assigned to one of the teams. Project interest is our main criteria for assigning members, but we also try to make sure the teams are balanced in terms of development experience and skill set. Basically, we want to avoid Project X having every new member of the club or Project Y having all the musicians of the club.
