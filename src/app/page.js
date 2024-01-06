@@ -40,8 +40,8 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 h-full blur-sm brightness-50	">
             <Image
               src="/landing-hero.jpg"
+              className='object-cover'
               fill
-              cover
               quality={100}
               alt="Landing Hero"
               priority
