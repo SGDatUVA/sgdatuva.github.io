@@ -15,8 +15,8 @@ export default function Page() {
         <div className="absolute inset-0 -z-10 h-full blur-sm brightness-50	">
             <Image
               src="/welcome-background.jpg"
-              fill
-              cover              
+              className='object-cover'
+              fill            
               quality={100}
               alt="Landing Hero"
               priority
