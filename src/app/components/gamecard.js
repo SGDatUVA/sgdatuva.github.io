@@ -13,8 +13,8 @@ const Gamecard = ({ className, gameInfo, flipped=false }) => {
           alt="Controller Logo"
         />
       </div>
-      <div className={"pt-2 px-1.5 flex flex-col text-primary text-sm leading-none" + (flipped ? " text-right" : "")}>
-        <h3 className="font-bold text-xl text-secondary leading-none">
+      <div className={"pt-2 px-1.5 flex flex-col text-primary text-sm xl:text-base leading-none" + (flipped ? " text-right" : "")}>
+        <h3 className="font-bold text-xl xl:text-2xl text-secondary leading-none">
           {gameInfo.name}
         </h3>
         <p className="mb-4">{gameInfo.engine}, {gameInfo.dimension}</p>
