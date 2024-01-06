@@ -16,7 +16,7 @@ module.exports = {
         "primary": "var(--primary-hex)",
         "secondary": "var(--secondary-hex)",
         "background": "var(--background-hex)",
-        "highlight": "var(--highlight-hex)", 
+        "background-alt": "var(--background-alt-hex)", 
       }
     },
   },

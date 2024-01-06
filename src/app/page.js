@@ -1,67 +1,103 @@
-import SGDLogo from '@/app/components/sgdlogo'
-import BgImage from '@/app/components/bg-image'
-import GameCard from './components/game-card'
-import FAQCard from './components/faq-card'
+import FAQ from '@/app/components/faq';
+import Gamecard from '@/app/components/gamecard';
+import Navbar from '@/app/components/navbar';
+import SectionHeader from '@/app/components/section-header';
+import Image from 'next/image';
+import Link from 'next/link'
+
+const games = [{ 
+    name: "Fae:Star",
+    thumbnail: "faestar.png",
+    engine: "Unity",
+    dimension: "2D",
+    description: "Turn-based RPG where you battle as four unique characters",
+    url: "https://ianharvey.itch.io/fae-star" 
+  },
+  { 
+    name: "Quicksilver",
+    thumbnail: "quicksilver.png",
+    engine: "Unity",
+    dimension: "3D",
+    description: "Physics-based platformer featuring a diverse move set to escape from the firewall",
+    url: "https://buzjr.itch.io/quicksilver"
+  },
+  { 
+    name: "Lantern's Lament",
+    thumbnail: "lanterns-lament.png",
+    engine: "Godot",
+    dimension: "2D",
+    description: "Puzzle game where you must conserve your lantern’s oil while exploring a dark maze",
+    url: "https://kedrickfudala.itch.io/lanterns-lament"
+  }]
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center">
+    <main>
+      <Navbar currentPage="Home"/>
 
-      {/* Landing*/}
-      {/* 80 px is because Navbar componenet in app/layout.js is h-20 or 80px */}
-      <div className='h-[calc(100vh-80px)] w-full flex flex-col'> 
-        <div className='relative h-full flex flex-col items-center'>
-          <BgImage source="/landing-hero.jpg" className="object-center opacity-80"/>
-          <SGDLogo className="w-[70vw] fill-highlight md:w-80 md:h-80 md:absolute md:left-10 md:bottom-10 "/>
+      {/* Hero */}
+      <div className="h-64 relative flex justify-center">
+        <div className="absolute inset-0 -z-10 h-full blur-sm brightness-50	">
+            <Image
+              src="/landing-hero.jpg"
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+              alt="Landing Hero"
+              priority
+            />
         </div>
-      </div>
-
-      {/* Welcome Section */}
-      <div className='w-full relative flex flex-col items-center border-t-2 border-highlight md:border-primary md:h-[50vh]'>
-        <BgImage source="/welcome-background.jpg"/>
-        <div className='h-full w-[70%] flex flex-col justify-center space-y-8 text-center font-medium text-base break-normal my-4 
-        md:my-0 md:text-lg lg:text-xl'>
-          <p>Welcome to the homepage of Student Game Developers! We are a student-run organization focused on creating original games and 
-            expanding knowledge about game design as an art and industry.
-          </p>
-          <p >The club is open all UVA students regardless of experience. Programmers, artists, writers, musicians, idea people or anybody 
-            who is just plain interested is encouraged to join!
-          </p> 
-          <p>Check out how to get involved and some of our most recent game down below!</p>
-        </div>
-      </div>
-
-      {/* Last Semester Games Section */}
-      <div className='w-full relative border-t-2 border-primary md:h-[50vh]'>
-        <BgImage source="/stock-computer.jpg" className="object-center"/>
-        <div className='h-full w-full flex flex-col items-center justify-center my-4 gap-x-8 md:flex-row md:my-0'>
-          <h2 className='text-3xl text-primary font-bold text-center mb-2 md:m-0 md:basis-1/6 lg:text-4xl'>Spring 2023<br/>Games</h2>
-          <div className='flex flex-col space-y-4 md:space-x-4 md:space-y-0 md:flex-row lg:space-x-8'>
-              <GameCard name="Flammable Forest" href="https://uvasgd.itch.io/flammable-forest" background="/flammableforest-thumbnail.png"/>
-              <GameCard name="Across the Sea of Dust and Rot" href="https://buzjr.itch.io/across-the-sea-of-dust-and-rot" background="/dustandrot-thumbnail.png"/>
-              <GameCard name="Dungeon Crab 2: Electric Boogaloo" href="https://jimmyc5.itch.io/dungeon-crab-2" background="/dungeoncrab-thumbnail.png"/>
+        <div className='w-11/12 flex flex-col justify-center space-y-4
+        text-xs lg:text-sm font-semibold text-center'> 
+          <div> 
+            Welcome to the homepage of Student Game Developers! We are a student-run organization focused on creating original games and expanding knowledge about game design as an art and industry.
+          </div>
+          <div> 
+            The club is open all UVA students regardless of experience. Programmers, artists, writers, musicians, idea people or anybody who is just plain interested is encouraged to join! 
+          </div>
+          <div> 
+            Check out how to get involved and some of our most recent game down below! 
           </div>
         </div>
+
       </div>
 
+
+      {/* Fall Games */}
+      <SectionHeader text="Fall 2023 Games"/>
+      <div className='flex flex-col items-center justify-center space-y-5 lg:flex-row lg:space-y-0 lg:space-x-8'>
+        <Gamecard gameInfo={games[0]}/>
+        <Gamecard className="hidden lg:flex" gameInfo={games[1]}/>
+        <Gamecard className="lg:hidden" gameInfo={games[1]} flipped={true}/>
+        <Gamecard gameInfo={games[2]}/>
+      </div>
+      
       {/* FAQ */}
-      <div className='w-full relative border-t-2 flex justify-center border-primary xl:h-[50vh]'>
-        <BgImage source="/game-jam.png" className="object-center opacity-60"/>
-        <div className='h-full w-full grid grid-cols-1 items-center justify-items-center my-4 gap-y-4 md:grid-cols-2 
-        xl:grid-cols-4 xl:gap-x-4 xl:my-0'>
-          <FAQCard question='Where and when does SGD meet?' answer='Our next event will be our September pitch night where the semester projects will be introduced. More details soon. '></FAQCard>
-          <FAQCard question='Does SGD do anything besides make games?' answer='SGD is primarily a game development club, but we also have social events and host sessions with industry professionals. '></FAQCard>
-          <FAQCard question='What kind of software does SGD use?' answer='SGD projects mainly use the Unity game engine and github for source control, but all forms of game making are welcome!'></FAQCard>
-          <FAQCard question='Who can I contact for more info?' answer='For any further questions feel free to reach out to uvasgd@gmail.com or contact any officers in the discord server. '></FAQCard>
+      <div className='bg-background-alt rounded-t-2xl pb-10'>
+        <SectionHeader text="FAQ" className="pt-5"/>
+        <div className='flex flex-col items-center space-y-4 text-xs'>
+          <p className='w-3/4 text-primary text-center font-bold'>
+            For an overview on how the club is structured, how teams are formed and games get developed check out our <Link href="/about"  className='underline underline-offset-2'>About Us</Link> page! 
+          </p>
+          <p className='w-3/4 pb-4 text-primary text-center font-bold'>
+            {/* Remember to update discord link in navbar too */}
+            Be sure to join discord <Link href="https://discord.gg/B5JYp7cwuC" className='underline underline-offset-2'>here</Link>! 
+          </p>
+          <FAQ question={"When are club-wide meetings?"} answer={"Every Thursday in Thornton E303 5:30pm - 7:00pm."}/>
+          <FAQ question={"When are team meetings?"} answer={"Every director holds weekly meetings for game-specific development time. Ask in your team channel in the discord to find out what time that is."}/>
+          <FAQ question={"How can I contact an officer?"} answer={"Join the discord and ping or private message anyone with the officer role! If email works better feel free to send a message to uvasgd@gmail.com."}/>
+          <FAQ question={"Is it just game development?"} answer={"The club is primarily focused on collaborative game development, but we also hold social nights (with board games and video games), industry guest speaker talks and development workshops. There’s no commitment so come out to whatever interests you!"}/>
+          <FAQ question={"Game Jams?"} answer={"We hold at least one game jam a semester where all skill levels in programming, music, art, game design start and finish a game in one weekend."}/>
+          <p className='w-3/4 pt-4 text-primary text-center font-bold'>We’re open and interested in collaborating with students, CIOs, orgnizations, companies, other game dev clubs so please reach out to  uvasgd@gmail.com with any questions, comments, or inquiries. Thanks!</p>
         </div>
+        
+      
       </div>
-
-
-        {/* Copyright */}
-      <div className='h-[80px] w-full bg-background self-end	border-t-2 border-primary flex items-center justify-center'>
-          <p>Copyright © Student Game Developers 2023</p>
+      
+      {/* Copyright */}
+      <div className='h-8 flex items-center justify-center'>
+        <p className='text-primary text-sm'>Copyright © Student Game Developers 2023</p>
       </div>
-
     </main>
-  )
+  );
 }

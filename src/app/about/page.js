@@ -1,16 +1,62 @@
+import FAQ from  '@/app/components/faq';
+import Gamecard from '@/app/components/gamecard';
+import Navbar from '@/app/components/navbar';
+import SectionHeader from '@/app/components/section-header';
+import Image from 'next/image';
+import Link from 'next/link'
+
 export default function Page() {
   return (
-    <div className="flex flex-col items-center text-center text-xl pt-8">
-      <h1 className="text-2xl font-bold">Page still under construction!</h1>
-      <ul className="space-y-2 pt-8">
-        <li>President: Spencer Portuese</li>
-        <li>Vice President: Joey Giordano</li>
-        <li>Head of Directors: Nate Pawlas</li>
-        <li>Treasurer: Eric Li</li>
-        <li>Internal relations: Catherine Xu</li>
-        <li>External relations: Zach Hay</li>
-        <li>Webmaster: Griffin Chozick</li>
-      </ul>
-    </div>
-  )
+    <main className='text-center'>
+      <Navbar currentPage="About Us"/>
+
+      {/* Hero */}
+      <div className="h-64 relative flex justify-center">
+        <div className="absolute inset-0 -z-10 h-full blur-sm brightness-50	">
+            <Image
+              src="/welcome-background.jpg"
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+              alt="Landing Hero"
+              priority
+            />
+        </div>
+        <div className='w-11/12 flex flex-col justify-center space-y-2
+        text-xs lg:text-sm font-semibold text-center'> 
+          <div> 
+            SGD games are developed in teams led by directors. All projects are developed over the course of a semester. At the beginning of every semester, we have a &quot;pitch night&quot; where directors will showcase their ideas to the club.           
+          </div>
+          <div> 
+            Afterwards, all members will rank the projects and be assigned to one of the teams. Project interest is our main criteria for assigning members, but we also try to make sure the teams are balanced in terms of development experience and skill set. Basically, we want to avoid Project X having every new member of the club or Project Y having all the musicians of the club.
+          </div>
+          <div> 
+            See the current semester projects and directors below!
+          </div>
+        </div>
+      </div>
+
+
+      {/* Current Sem Projects */}
+      <SectionHeader text="Spring 2024 Projects"/>
+      <h2>TBD at January pitch night</h2>
+
+      {/* Current Sem Projects */}
+      <SectionHeader text="Officers"/>
+      <p>
+        President: Spencer Portuese <br/>
+        Vice President: Joey Giordano <br/>
+        Head of Directors: Nate Pawlas <br/>
+        Treasurer: Eric Li <br/>
+        Internal relations: Catherine Xu <br/>
+        External relations: Zach Hay <br/>
+        Webmaster: Griffin Chozick <br/>
+      </p>
+
+      {/* Copyright */}
+      <div className='mt-8 h-8 flex items-center justify-center '>
+        <p className='text-primary text-sm'>Copyright © Student Game Developers 2023</p>
+      </div>
+    </main>
+  );
 }
