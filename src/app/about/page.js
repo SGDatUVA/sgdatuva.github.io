@@ -39,7 +39,14 @@ export default function Page() {
 
       {/* Current Sem Projects */}
       <SectionHeader text="Spring 2024 Projects"/>
-      <p className='xl:text-base'>TBD at January pitch night</p>
+      <p className='xl:text-base'>        
+        <b> Elemental Command </b>| directed by Spencer and Joey <br/>
+        <b> Gold & Rot </b> | directed by Kedrick and Nate <br/>
+        <b> Riccochet </b> | directed by Luke <br/>
+        <b> School of Nightmares </b> | directed by Catherine, Daria and Kyuri <br/>
+        <b> Frostbane </b> | directed by Aiden <br/>
+        <b> Necromanager </b> | directed by Via and Alissa <br/>
+      </p>
 
       {/* Current Sem Projects */}
       <SectionHeader text="Officers"/>
